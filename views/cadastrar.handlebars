@@ -1,54 +1,109 @@
-<div class="container-fluid p-5 bg-primary text-white text-center">
-  <h1>My First Bootstrap Page</h1>
+<div class="container">
+  <div class="form-image">
+    <img src="img/undraw_collecting_re_lp6p.svg">
   </div>
-<form action="/cadastrar" action="POST">
 
-<label>Nome Completo</label>
-<input type="text" name="nome"><br>
-&nbsp;
+  <!-- Campo de entrada para o cnpj -->
+  <div class="form">
+    <form action="cadastrar">
+      <div class="form-header">
+        <div class="title">
+          <h1>Cadastre-se</h1>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-box">
+          <label class="form-label" for="cnpj">CNPJ:</label>
+          <input class="form-control" type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/0001-XX" />
+        </div>
 
-<label>Cnpj</label>
-<input type="text" name="cnpj"><br>
-&nbsp;
+        <!-- Campo de entrada para a razão social -->
+        <div class="input-box">
+          <label class="form-label" for="razao_social">Razão Social:</label>
+          <input class="form-control" type="text" id="razao_social" name="razao_social" required />
+        </div>
 
-<label>Razão social</label>
-<input type="text" name="razaoSocial"><br>
-&nbsp;
+        <!-- Campo de entrada para o nome fantasia -->
+        <div class="input-box">
+          <label class="form-label" for="nome_fantasia">Nome Fantasia:</label>
+          <input class="form-control" type="text" id="nome_fantasia" name="nome_fantasia" />
+        </div>
+        <!-- Campo de entrada para o endereço -->
+        <div class="input-box">
+          <label class="form-label" for="endereco">Endereço:</label>
+          <input class="form-control" type="text" id="endereco" name="endereco" placeholder="Rua/Av" required />
+        </div>
+        <!-- Campo de entrada para o número -->
+        <div class="input-box">
+          <label class="form-label" for="numero">Número:</label>
+          <input class="form-control" type="text" id="numero" name="numero" />
+          <input class="form-check-input" type="checkbox" id="sem_numero" onchange="toggleNumero()" />
+          <label class="form-check-label" for="sem_numero">S/N</label>
+        </div>
+        <!-- Campo de entrada para o complemento -->
+        <div class="input-box">
+          <label class="form-label" for="complemento">Complemento:</label>
+          <input class="form-control" type="text" id="complemento" name="complemento" />
+        </div>
+        <!-- Campo de entrada para o bairro -->
+        <div class="input-box">
+          <label class="form-label" for="bairro">Bairro:</label>
+          <input class="form-control" type="text" id="bairro" name="bairro" required />
+        </div>
+        <!-- Campo de entrada para o cep -->
+        <div class="input-box">
+          <label class="form-label" for="cep">CEP:</label>
+          <input class="form-control" type="text" id="cep" name="cep" placeholder="00000-000" required />
+        </div>
+        <!-- Campo de entrada para a cidade -->
+        <div class="input-box">
+          <label class="form-label" for="cidade">Cidade:</label>
+          <input class="form-control" type="text" id="cidade" name="cidade" required />
+        </div>
+        <!-- Campo de entrada para o estaod -->
+        <div class="input-box">
+          <label class="form-label" for="estado">Estado:</label>
+          <input class="form-control" type="text" id="estado" name="estado" required />
+        </div>
+        <!-- Campo de entrada para o numero -->
+        <div class="input-box">
+          <label class="form-label" for="numero">Telefone:</label>
+          <input class="form-control" type="tel" id="numero" name="numero" />
+        </div>
+        <!-- Campo de entrada para o e-mail -->
+        <div class="input-box">
+          <label class="form-label" for="senha">E-mail:</label>
+          <input class="form-control" type="senha" id="senha" name="senha" placeholder="email@recicleaqui.com"
+            required />
+        </div>
+        <!-- Campo de entrada para o nome do responsável -->
+        <div class="input-box">
+          <label class="form-label" for="responsavel">Nome do Responsável:</label>
+          <input class="form-control" type="text" id="responsavel" name="responsavel" required />
+        </div>
+        <!-- Campo de entrada para o numero do responsável -->
+        <div class="input-box">
+          <label class="form-label" for="numero_responsavel">Telefone do Responsável:</label>
+          <input class="form-control" type="tel" id="numero_responsavel" name="numero_responsavel" required />
+        </div>
 
-<label>Nome Fantasia</label>
-<input type="text" name="nomeFanatasia"><br>
-&nbsp;
+        <div class="input-box">
+          <label class="form-label" for="senha">Senha:</label>
+          <input class="form-control" type="senha" id="senha" name="senha" placeholder="******" required />
+        </div>
 
-<label>Cep</label>
-<input type="int" name="cep"><br>
-&nbsp;
+        <div class="input-box">
+          <label class="form-label" for="confirmar_senha">Confirmar senha:</label>
+          <input class="form-control" type="senha" id="confirmar_senha" name="confirmar_senha" placeholder="******"
+            required />
+        </div>
+      </div>
 
-<label>Endereco</label>
-<input type="text" name="endereco"><br>
-&nbsp;
+      <!-- Botão de submissão do formulário -->
+      <div class="continue-button">
+        <button type="submit" class="btn btn-primary"> Cadastrar</button>
+      </div>
 
-<label>Numero do endereco</label>
-<input type="int" name="numeroEndereco"><br>
-&nbsp;
-
-<label>Cidade</label>
-<input type="text" name="cidade"><br>
-&nbsp;
-
-<label>Estado</label>
-<input type="char" name="estado"><br>
-&nbsp;
-
-<label>Crie a senha</label>
-<input type="text" name="senhaLogin"><br>
-&nbsp;
-
-<label>Confirmar senha</label>
-<input type="text" name="senhaLoginConfirm"><br>
-&nbsp;
-
-<button type="submit">Cadastrar</button>
-
-</form>
-
-
+    </form>
+  </div>
+</div>
